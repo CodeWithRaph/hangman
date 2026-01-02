@@ -1,0 +1,90 @@
+.prop{
+    display: none;
+}
+
+.c_hangman{
+    height: clamp(400px, 60vh, 500px);
+    width: clamp(200px, 40vw, 250px);
+    display: grid;
+    grid-template-columns: 20px 20px 3fr 2fr 2fr 15px 10px 15px 2fr 2fr 3fr 20px 20px;
+    grid-template-rows: 20px 1fr 40px 3fr 3fr 1fr 20px;
+    filter: drop-shadow(10px 0 10px rgba(0,0,0,0.6));
+}
+
+.wood{
+    background: linear-gradient(145deg, #6b4423, #4a2c0f, #3a2010);
+    box-shadow: 
+        inset -2px -2px 6px rgba(0,0,0,0.6),
+        inset 2px 2px 4px rgba(107,68,35,0.4),
+        0 2px 4px rgba(0,0,0,0.5);
+}
+
+.man{
+    background: #5a4a3a;
+}
+
+.horizontal-beam{
+    grid-column: 2 / 13;
+    grid-row: 1;
+}
+
+.L-beam{
+    grid-column: 2;
+    grid-row: 2 / 7;
+}
+
+.R-beam{
+    grid-column: 12;
+    grid-row: 2 / 7;
+}
+
+.basis{
+    grid-column: 1 / 14;
+    grid-row: 7;
+}
+
+.rope{
+    background: linear-gradient(90deg, #d2b48c, #c19a6b);
+    grid-column: 7;
+    grid-row: 2;
+    box-shadow: inset -1px 0 2px rgba(0,0,0,0.3);
+}
+
+.head{
+    grid-column: 6 / 9;
+    grid-row: 3;
+    border-radius: 40px 40px 25px 25px;
+    border-bottom: 7px solid tan;
+}
+
+.chest{
+    grid-column: 5 / 10;
+    grid-row: 4 / 5;
+}
+
+
+.R-arm{
+    grid-column: 10 / 11;
+    grid-row: 4 / 5;
+    border-radius: 0 30px 20px 20px;
+    transform: rotate(-5deg);
+}
+
+.L-arm{
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+    border-radius: 30px 0 20px 20px;
+    transform: rotate(5deg);
+}
+
+.R-leg{
+    grid-column: 8 / 10;
+    grid-row: 5 / 6;
+    border-radius: 0 0 20px 20px;
+}
+
+.L-leg{
+    grid-column: 5 / 7;
+    grid-row: 5 / 6;
+    border-radius: 0 0 20px 20px;
+}

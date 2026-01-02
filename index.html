@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hangman.css">
+    <link rel="stylesheet" href="triforce.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Jurassic Hangman</title>
+</head>
+<body>
+
+    <div class="stats">
+        <p id="restant">Coups restant: --</p>
+        <p id="malus">Malus: -- min</p>
+    </div>
+
+    <div class="container">
+        
+        <h2 id="msg">Vous avez trouvé le 2e fragment de la Triforce CCNA !</h2>
+
+        <section class="c_triforce">
+            <div class="triangle" id="t1"></div>
+            <div class="triangle" id="t2"></div>
+            <div class="triangle" id="t3"></div>
+        </section>
+
+        <main class="game-layout">
+                
+
+            <section class="c_display game">
+                <div class="c_hangman">
+                    <div id="basis" class="prop wood basis"></div>
+                    <div id="leftbeam" class="prop wood L-beam"></div>
+                    <div id="rightbeam" class="prop wood R-beam"></div>
+                    <div id="topbeam" class="prop wood horizontal-beam"></div>
+                    
+                    <div id="rope" class="prop rope"></div>
+                    
+                    <div id="head" class="prop man head"></div>
+                    <div id="chest" class="prop man chest"></div>
+                    <div id="leftarm" class="prop man arm L-arm"></div>
+                    <div id="rightarm" class="prop man arm R-arm"></div>
+                    <div id="leftleg" class="prop man leg L-leg"></div>
+                    <div id="rightleg" class="prop man leg R-leg"></div>
+                    
+                </div>
+
+                <h1 id="word" class="game"></h1>
+            </section>
+            
+
+            <div class="c_letter game">
+                <button>A</button>
+                <button>B</button>
+                <button>C</button>
+                <button>D</button>
+                <button>E</button>
+                <button>F</button>
+                <button>G</button>
+                <button>H</button>
+                <button>I</button>
+                <button>J</button>
+                <button>K</button>
+                <button>L</button>
+                <button>M</button>
+                <button>N</button>
+                <button>O</button>
+                <button>P</button>
+                <button>Q</button>
+                <button>R</button>
+                <button>S</button>
+                <button>T</button>
+                <button>U</button>
+                <button>V</button>
+                <button>W</button>
+                <button>X</button>
+                <button>Y</button>
+                <button>Z</button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
