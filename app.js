@@ -24,6 +24,16 @@ const words2 = [
     "53595354454d45"
 ];
 
+const step_code = "d8639c216d6621cbd090dfcb6ce219efdbe329ab7e44d54e34433f47d9fceca9";
+
+const step_code2 = [
+        "37333335",
+        "36343932",
+        "32323633",
+        "38343633",
+        "36303133"
+    ]
+
 const hangman = ['basis', 'leftbeam', 'topbeam', 'rightbeam', 'rope', 'head', 'chest', 'leftarm', 'rightarm', 'leftleg', 'rightleg'];
 
 function hexToString(hex) {
@@ -41,6 +51,15 @@ async function getWord(words2, word) {
     for (const word2 of words2) {
         if ((await sha256(hexToString(word2))) === word) {
             return hexToString(word2);
+        }
+    }
+    return null;
+}
+
+async function getCode(codelist, code) {
+    for (const code2 of codelist) {
+        if ((await sha256(hexToString(code2))) === code) {
+            return hexToString(code2);
         }
     }
     return null;
@@ -69,6 +88,20 @@ function Triforce() {
         document.getElementById("t3").style.left = "100px";
         document.getElementById("t3").style.transform = "rotate(0deg)";
     }, 100);
+}
+
+function displayStepCode(codelist, code){
+    getCode(codelist, code).then(decodedCode => {
+        const codeElement = document.getElementById("step-code");
+        const codeDisplay = document.getElementById("code-display");
+        
+        if (decodedCode) {
+            codeElement.textContent = decodedCode;
+            setTimeout(() => {
+                codeDisplay.style.opacity = "1";
+            }, 1500);
+        }
+    });
 }
 
 async function startGame() {
@@ -129,6 +162,7 @@ async function startGame() {
                     display(wordStr, guess);
                     if (win(wordStr)) {
                         Triforce();
+                        displayStepCode(step_code2, step_code);
                     }
                 } else {
                     error++;
