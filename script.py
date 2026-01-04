@@ -22,21 +22,33 @@ def main():
     This script creates several encryption that will be needed to create the hangman game.
     """
     
-    txt = "original.txt"
-    f_hash = "sha256.txt"
-    f_hex = "hexadecimal.txt"
+    # txt = "original.txt"
+    # f_hash = "sha256.txt"
+    # f_hex = "hexadecimal.txt"
+    
+    # entrees = [
+    # "reseaux",
+    # "telecommunications",
+    # "cybersecurite",
+    # "programmation",
+    # "routeur",
+    # "transmission",
+    # "pentest",
+    # "certifications",
+    # "serveur",
+    # "systeme"
+    # ]
+    
+    txt = "code.txt"
+    f_hash = "code_sha256.txt"
+    f_hex = "code_hexadecimal.txt"
     
     entrees = [
-    "reseaux",
-    "telecommunications",
-    "cybersecurite",
-    "programmation",
-    "routeur",
-    "transmission",
-    "pentest",
-    "certifications",
-    "serveur",
-    "systeme"
+        "7335",
+        "6492",
+        "2263",
+        "8463",
+        "6013"
     ]
     
     encryption(entrees, txt, f_hash, f_hex)
