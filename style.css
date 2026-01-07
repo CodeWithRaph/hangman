@@ -357,3 +357,14 @@ button:disabled::before{
     max-width: 90%;
     animation: glow 2s ease-in-out infinite;
 }
+
+.final-malus {
+    color: var(--amber);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    margin-top: 14px;
+    text-shadow:
+        2px 2px 0px var(--accent),
+        0 0 16px rgba(201, 169, 97, 0.4);
+}

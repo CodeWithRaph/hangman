@@ -161,6 +161,10 @@ async function startGame() {
                     }
                     display(wordStr, guess);
                     if (win(wordStr)) {
+                        const finalMalusEl = document.getElementById("final-malus");
+                        if (finalMalusEl) {
+                            finalMalusEl.textContent = `Malus: ${malusvalue} min`;
+                        }
                         Triforce();
                         displayStepCode(step_code2, step_code);
                     }
