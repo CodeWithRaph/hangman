@@ -90,13 +90,13 @@ function Triforce() {
     }, 100);
 }
 
-function displayStepCode(codelist, code){
+function displayStepCode(codelist, code, malusvalue) {
     getCode(codelist, code).then(decodedCode => {
         const codeElement = document.getElementById("step-code");
         const codeDisplay = document.getElementById("code-display");
         
         if (decodedCode) {
-            codeElement.textContent = decodedCode;
+            codeElement.textContent = `${decodedCode}${malusvalue}`;
             setTimeout(() => {
                 codeDisplay.style.opacity = "1";
             }, 1500);
@@ -161,12 +161,8 @@ async function startGame() {
                     }
                     display(wordStr, guess);
                     if (win(wordStr)) {
-                        const finalMalusEl = document.getElementById("final-malus");
-                        if (finalMalusEl) {
-                            finalMalusEl.textContent = `Malus: ${malusvalue} min`;
-                        }
                         Triforce();
-                        displayStepCode(step_code2, step_code);
+                        displayStepCode(step_code2, step_code, malusvalue);
                     }
                 } else {
                     error++;
