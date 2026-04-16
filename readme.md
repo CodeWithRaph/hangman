@@ -19,7 +19,7 @@ In most cases the Access Point **redirect** the client to a **Captive Portal**. 
 
 But we **don't need that in this project**. In this context we just need to redirect the client to a **Captive Portal** and **forget about the routing**. And instead of creating a form, create a **hangman mini game**.
 
-Check `doc-comming-soon` to understand how to create an **AP** with a **Captive Portal** on **Linux**. 
+Check [My Personnal Documentation](https://codewithraph.gitbook.io/codewithraph-docs)to understand how to create an **AP** with a **Captive Portal** on **Linux**. 
 
 ### Security
 
